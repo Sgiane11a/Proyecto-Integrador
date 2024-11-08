@@ -1,7 +1,8 @@
 @extends('layouts.Encabezado') 
 
-@section('title', 'Anuncios')
+@section('title', 'Index')
 
 @section('content')
+<!-- Se escribe aca -->
 
 @endsection

@@ -103,6 +103,59 @@
             margin: 0 auto; 
             display: block;
         }
+        
+        /* Estilos para el Pie de Página */
+        .pie-pagina {
+            background: linear-gradient(90deg, #ff00cc, #6600cc);
+            color: white;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+
+        .pie-pagina a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .pie-pagina a:hover {
+            color: #ffe0ff;
+        }
+
+        .logopie {
+            width: 60%; 
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .redes-sociales i {
+            font-size: 18px;
+            color: white;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .redes-sociales i:hover {
+            color: #ffe0ff;
+        }
+
+        hr {
+            border-top: 1px solid #ffffff;
+            opacity: 0.2;
+        }
+
+        @media (max-width: 768px) {
+            .pie-pagina .col-md-3, .pie-pagina .col-md-6 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .pie-pagina .col-md-6 .row {
+                display: flex;
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
@@ -110,7 +163,7 @@
     <nav class="navbar navbar-expand-lg encabezado">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="{{ asset('images/logo.png') }}" alt="logo" class="logo" width="60" height="auto">
+
                 <span class="titulo">ONLINE COFFEE</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -150,6 +203,56 @@
     <div class="contenido flex-grow-1">
         @yield('content') 
     </div>
+    
+
+        <!-- Pie de Página -->
+    <footer class="pie-pagina">
+        <div class="container">
+            <div class="row">
+                <!-- Logo y lema -->
+                <div class="col-md-3 text-center mb-3 mb-md-0">
+                    <img src="{{ asset('images/logo.png') }}" alt="logo" class="logopie">
+                    <p>Aquí no hay límites</p>
+                </div>
+                
+                <!-- Sección de enlaces -->
+                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                    <div class="row">
+                        <div class="col-6">
+                            <p><a href="#">Acerca de Online Coffee</a></p>
+                            <p><a href="#">Términos y condiciones</a></p>
+                            <p><a href="#">Política de Privacidad</a></p>
+                            <p><a href="#">Preguntas frecuentes</a></p>
+                            <p><a href="#">Reglamento</a></p>
+                        </div>
+                        <div class="col-6">
+                            <p><a href="#">Contáctanos</a></p>
+                            <p><a href="#">Soporte</a></p>
+                            <p><a href="#">Contacto</a></p>
+                            <p>Horario de atención:<br>Lunes a Viernes<br>9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Información de reclamaciones y redes sociales -->
+                <div class="col-md-3 text-center">
+                    <p><i class="fas fa-book"></i> Libro de Reclamaciones</p>
+                    <p>Mainframe S.A.C.<br>RUC: 20606475757</p>
+                    <div class="redes-sociales">
+                        <span>Síguenos en: </span>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; Online Coffee 2024</p>
+            </div>
+        </div>
+    </footer>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
